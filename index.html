@@ -27,7 +27,7 @@
       <input id="input-category" />
       <input id="input-price" required min="1" />
       <input id="input-quantity" required min="1" />
-      <button id="btn-add" />
+      <button id="btn-add">Thêm sản phẩm</button>
     </div>
   </body>
   <script>
@@ -78,6 +78,7 @@
         }
       });
 
+      tbody.innerHTML = "";
       rows.forEach((row) => {
         tbody.appendChild(row);
       });
