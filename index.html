@@ -68,6 +68,14 @@
       const rows = Array.from(tbody.querySelectorAll("tr"));
 
       rows.sort((rowA, rowB) => {
+        if (
+          !rowA.cells ||
+          rowA.cells.length < 2 ||
+          !rowB.cells ||
+          rowB.cells.length < 2
+        ) {
+          return 0;
+        }
         const nameA = rowA.cells[1].innerText.trim();
         const nameB = rowB.cells[1].innerText.trim();
 
