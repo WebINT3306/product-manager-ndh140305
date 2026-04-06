@@ -60,7 +60,7 @@
 
     const thName = document.getElementById("product-name");
     const sortIcon = document.getElementById("sort-icon");
-    const tbody = document.getElementById("product-list");
+    const tbody = document.querySelector("#product-table tbody");
 
     let isAscending = true;
 
@@ -98,7 +98,7 @@
       const priceValue = inputPrice.value.trim();
       const quantityValue = inputQuantity.value.trim();
 
-      const tbody = document.getElementById("product-list");
+      const tbody = document.querySelector("#product-table tbody");
 
       const currentRowsCount = tbody.querySelectorAll("tr").length;
       const newStt = currentRowsCount + 1;
