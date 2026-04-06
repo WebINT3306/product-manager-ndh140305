@@ -36,8 +36,10 @@
       if (xhr.readyState === 4 && xhr.status === 200) {
         const products = JSON.parse(xhr.responseText);
 
-        const tbody = document.getElementById("product-list");
+        const tbody = document.querySelector("#product-table tbody");
+
         let htmlContent = "";
+
         products.forEach((product) => {
           htmlContent += `
           <tr>
